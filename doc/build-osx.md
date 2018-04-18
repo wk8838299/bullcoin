@@ -49,8 +49,8 @@ Homebrew is an alternative to MacPorts. If you're using MacPorts, skip this sect
 
 ## Building Feecoin
 
-    git clone https://github.com/feecoind/WAT feecoin
-    cd WAT/src
+    git clone https://github.com/feecoind/Fee feecoin
+    cd Fee/src
     make -f makefile.osx
 
 ## Useful commands

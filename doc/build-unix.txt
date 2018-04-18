@@ -75,7 +75,7 @@ Dependency Build Instructions: Gentoo
 emerge -av1 --noreplace boost openssl sys-libs/db
 
 Take the following steps to build (no UPnP support):
- cd ${WAT_DIR}/src
+ cd ${Fee_DIR}/src
  make -f makefile.unix USE_UPNP=
  strip feecoind
 

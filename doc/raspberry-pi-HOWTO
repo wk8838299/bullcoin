@@ -59,7 +59,7 @@ tail -f .feecoind/debug.log ( press Ctrl+C to cancel )
 # get a wallet address
 feecoind getnewaddress
 
-# copy that address and send 1 WAT as a test. 
+# copy that address and send 1 Fee as a test. 
 # Wait for a block confirmation and it should show up after you run:
 feecoind getbalance
 
@@ -83,4 +83,4 @@ host: sftp://pi-ipaddress user: pi password:your-password port:22
 # or place your wallet backup there in that folder. 
 # ( Important: Make sure you run 'feecoind stop' before you modify conf/wallet files
 
-# thats pretty much it. ask devs for tips on Discord or Telegram on how to stake WAT on your PI.
+# thats pretty much it. ask devs for tips on Discord or Telegram on how to stake Fee on your PI.
