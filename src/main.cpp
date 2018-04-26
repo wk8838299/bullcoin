@@ -22,7 +22,7 @@ using namespace std;
 using namespace boost;
 
 #if defined(NDEBUG)
-# error "Feecoin cannot be compiled without assertions."
+# error "Lemanum cannot be compiled without assertions."
 #endif
 
 //
@@ -78,7 +78,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Feecoin Signed Message:\n";
+const string strMessageMagic = "Lemanum Signed Message:\n";
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -998,25 +998,23 @@ static CBigNum GetProofOfStakeLimit(int nHeight)
 int64_t GetProofOfWorkReward(int64_t nFees)
 {
     int64_t nSubsidy = 1 * COIN;
- 
-     if(pindexBest->nHeight <= 20) {
-         nSubsidy = 1000000 * COIN;
-   }else if(pindexBest->nHeight <= 10000){
-        nSubsidy = 500 * COIN;
-   }else if(pindexBest->nHeight <= 10000){
-         nSubsidy = 800 * COIN;
+
+    if(pindexBest->nHeight <=0) {
+        nSubsidy = 6500000 * COIN;     //premine <1%
+   } else if(pindexBest->nHeight <= 10000) {
+        nSubsidy = 25000 * COIN;                                 
    } else if(pindexBest->nHeight <= 20000) {
-        nSubsidy = 1600 * COIN;
+        nSubsidy = 12500 * COIN;                     
     } else if(pindexBest->nHeight <= 40000) {
-        nSubsidy = 3200 * COIN;
-    } else if(pindexBest->nHeight <= 60000) {   //start POS
-        nSubsidy = 1600 * COIN;
-    } else if(pindexBest->nHeight <= 100000) {    
-       nSubsidy = 800 * COIN;
-    } else if(pindexBest->nHeight <= 600000) {
-        nSubsidy = 400 * COIN;                    //697 500 000
+        nSubsidy = 6250 * COIN;
+    } else if(pindexBest->nHeight <= 60000) {   //start POW
+        nSubsidy = 3125 * COIN;
+    } else if(pindexBest->nHeight <= 100000) {
+       nSubsidy = 1500 * COIN;
+    } else if(pindexBest->nHeight <= 200000) {
+        nSubsidy = 750 * COIN;                       //697 500 000 + premine 704 000 000
     } else {
-        nSubsidy = 100 * COIN;
+        nSubsidy = 1 * COIN;
     }
 
     LogPrint("GetProofOfWorkReward() : create=%s", FormatMoney(nSubsidy).c_str(), nSubsidy);
@@ -1034,18 +1032,18 @@ int64_t nSubsidy;
     nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);
 
 
-if(nBestHeight <= 500000)
+if(nBestHeight <= 60000)
             {
             	nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8); //120%
             }
-            else if(nBestHeight <= 550000)
+            else if(nBestHeight <= 100000)
             {
             	nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8) * 5 ; //600%
             }
 
-        else if (nBestHeight <= 580000)
+	    else if (nBestHeight <= 200000)
             {
-            	nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8) * 10 ; //1200%
+            	nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8) * 10 ; //360%
             }
 
 	    else
@@ -1690,7 +1688,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
             return error("ConnectBlock() : WriteBlockIndex failed");
     }
 
-    // Feech for transactions paying to me
+    // Watch for transactions paying to me
     BOOST_FOREACH(CTransaction& tx, vtx)
         SyncWithWallets(tx, this);
 
@@ -2779,7 +2777,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("feecoin-loadblk");
+    RenameThread("lemanum-loadblk");
 
     CImportingNow imp;
 
