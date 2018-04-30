@@ -1,2 +1,0 @@
-debian/bin/feecoind usr/bin
-src/feecoind usr/lib/feecoin

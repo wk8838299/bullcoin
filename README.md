@@ -1,2 +1,0 @@
-# bullcoin
-This is bullcoin
