@@ -1,0 +1,11 @@
+[Protocol]
+exec=lemanum-qt '%u'
+protocol=lemanum
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

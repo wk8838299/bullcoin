@@ -1,0 +1,10 @@
+obj/txmempool.o: txmempool.cpp core.h uint256.h serialize.h allocators.h \
+ version.h clientversion.h util.h netbase.h compat.h script.h keystore.h \
+ key.h crypter.h sync.h threadsafety.h stealth.h bignum.h txmempool.h \
+ main.h net.h mruset.h protocol.h addrman.h scrypt.h hashblock.h sph_jh.h \
+ sph_types.h sph_keccak.h sph_echo.h
+txmempool.cpp core.h uint256.h serialize.h allocators.h :
+ version.h clientversion.h util.h netbase.h compat.h script.h keystore.h :
+ key.h crypter.h sync.h threadsafety.h stealth.h bignum.h txmempool.h :
+ main.h net.h mruset.h protocol.h addrman.h scrypt.h hashblock.h sph_jh.h :
+ sph_types.h sph_keccak.h sph_echo.h :

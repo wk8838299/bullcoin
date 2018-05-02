@@ -1,0 +1,22 @@
+obj/checkpoints.o: checkpoints.cpp checkpoints.h net.h core.h uint256.h \
+ serialize.h allocators.h version.h clientversion.h util.h netbase.h \
+ compat.h script.h keystore.h key.h crypter.h sync.h threadsafety.h \
+ stealth.h bignum.h mruset.h protocol.h addrman.h txdb.h txdb-leveldb.h \
+ main.h txmempool.h scrypt.h hashblock.h sph_jh.h sph_types.h \
+ sph_keccak.h sph_echo.h /opt/bzlcoin/src/leveldb/include/leveldb/db.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/iterator.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/slice.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/status.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/options.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/write_batch.h
+checkpoints.cpp checkpoints.h net.h core.h uint256.h :
+ serialize.h allocators.h version.h clientversion.h util.h netbase.h :
+ compat.h script.h keystore.h key.h crypter.h sync.h threadsafety.h :
+ stealth.h bignum.h mruset.h protocol.h addrman.h txdb.h txdb-leveldb.h :
+ main.h txmempool.h scrypt.h hashblock.h sph_jh.h sph_types.h :
+ sph_keccak.h sph_echo.h /opt/bzlcoin/src/leveldb/include/leveldb/db.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/iterator.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/slice.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/status.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/options.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/write_batch.h :

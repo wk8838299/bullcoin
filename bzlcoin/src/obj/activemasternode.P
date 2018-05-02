@@ -1,0 +1,26 @@
+obj/activemasternode.o: activemasternode.cpp protocol.h serialize.h \
+ allocators.h version.h clientversion.h netbase.h compat.h uint256.h \
+ activemasternode.h sync.h threadsafety.h net.h core.h util.h script.h \
+ keystore.h key.h crypter.h stealth.h bignum.h mruset.h addrman.h main.h \
+ txmempool.h scrypt.h hashblock.h sph_jh.h sph_types.h sph_keccak.h \
+ sph_echo.h init.h wallet.h ui_interface.h walletdb.h db.h base58.h \
+ smessage.h /opt/bzlcoin/src/leveldb/include/leveldb/db.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/iterator.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/slice.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/status.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/options.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/write_batch.h lz4/lz4.h \
+ darksend.h masternode.h
+activemasternode.cpp protocol.h serialize.h :
+ allocators.h version.h clientversion.h netbase.h compat.h uint256.h :
+ activemasternode.h sync.h threadsafety.h net.h core.h util.h script.h :
+ keystore.h key.h crypter.h stealth.h bignum.h mruset.h addrman.h main.h :
+ txmempool.h scrypt.h hashblock.h sph_jh.h sph_types.h sph_keccak.h :
+ sph_echo.h init.h wallet.h ui_interface.h walletdb.h db.h base58.h :
+ smessage.h /opt/bzlcoin/src/leveldb/include/leveldb/db.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/iterator.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/slice.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/status.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/options.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/write_batch.h lz4/lz4.h :
+ darksend.h masternode.h :

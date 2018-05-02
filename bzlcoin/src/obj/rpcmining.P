@@ -1,0 +1,32 @@
+obj/rpcmining.o: rpcmining.cpp main.h core.h uint256.h serialize.h \
+ allocators.h version.h clientversion.h util.h netbase.h compat.h \
+ script.h keystore.h key.h crypter.h sync.h threadsafety.h stealth.h \
+ bignum.h net.h mruset.h protocol.h addrman.h txmempool.h scrypt.h \
+ hashblock.h sph_jh.h sph_types.h sph_keccak.h sph_echo.h db.h txdb.h \
+ txdb-leveldb.h /opt/bzlcoin/src/leveldb/include/leveldb/db.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/iterator.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/slice.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/status.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/options.h \
+ /opt/bzlcoin/src/leveldb/include/leveldb/write_batch.h init.h wallet.h \
+ ui_interface.h walletdb.h base58.h smessage.h lz4/lz4.h miner.h \
+ masternode.h bitcoinrpc.h json/json_spirit_reader_template.h \
+ json/json_spirit_value.h json/json_spirit_error_position.h \
+ json/json_spirit_writer_template.h json/json_spirit_utils.h \
+ checkpoints.h
+rpcmining.cpp main.h core.h uint256.h serialize.h :
+ allocators.h version.h clientversion.h util.h netbase.h compat.h :
+ script.h keystore.h key.h crypter.h sync.h threadsafety.h stealth.h :
+ bignum.h net.h mruset.h protocol.h addrman.h txmempool.h scrypt.h :
+ hashblock.h sph_jh.h sph_types.h sph_keccak.h sph_echo.h db.h txdb.h :
+ txdb-leveldb.h /opt/bzlcoin/src/leveldb/include/leveldb/db.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/iterator.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/slice.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/status.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/options.h :
+ /opt/bzlcoin/src/leveldb/include/leveldb/write_batch.h init.h wallet.h :
+ ui_interface.h walletdb.h base58.h smessage.h lz4/lz4.h miner.h :
+ masternode.h bitcoinrpc.h json/json_spirit_reader_template.h :
+ json/json_spirit_value.h json/json_spirit_error_position.h :
+ json/json_spirit_writer_template.h json/json_spirit_utils.h :
+ checkpoints.h :

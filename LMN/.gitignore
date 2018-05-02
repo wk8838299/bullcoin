@@ -1,0 +1,26 @@
+src/*.exe
+src/lemanum
+src/lemanumd
+src/test_lemanum
+src/build.h
+.*.swp
+*.*~*
+*.bak
+*.rej
+*.orig
+*.o
+*.patch
+.lemanum
+#compilation and Qt preprocessor part
+*.qm
+Makefile
+lemanum-qt
+#resources cpp
+qrc_*.cpp
+#qt creator
+*.pro.user
+#mac specific
+.DS_Store
+build
+
+!src/leveldb/Makefile
