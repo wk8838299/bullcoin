@@ -1,2 +1,0 @@
-debian/bin/bzlcoind usr/bin
-src/bzlcoind usr/lib/bzlcoin
